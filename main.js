@@ -6,15 +6,11 @@ let mainWindow;
 
 const flash_path = path.join(__dirname, `${os.arch() === 'x64' ? "flash_plugin/64x/libpepflashplayer.so" : "flash_plugin/32x/libpepflashplayer.so"}`);
 app.commandLine.appendSwitch("ppapi-flash-path", flash_path);
-app.commandLine.appendSwitch("ppapi-flash-version", "26.0.0.151");
+app.commandLine.appendSwitch("ppapi-flash-version", `${os.arch() === 'x64' ? "32.0.0.387" : "26.0.0.151"}`);
 
 dialog.showErrorBox = function(title, content) {
   console.log(`${title}\n${content}`);
 };
-
-// ipcMain("load-page", (event, arg) => {
-//   mainWindow.loadURL(arg);
-// });
 
 app.on("ready", function() {
   mainWindow = new BrowserWindow({
@@ -46,6 +42,9 @@ app.on("ready", function() {
     }
   });
 
-  //mainWindow.loadURL("file://" + __dirname + "/TFM/index.html");
-  mainWindow.loadURL('http://www.transformice.com/TransformiceChargeur.swf');
+  mainWindow.loadURL("file://" + __dirname + "/TFM/index.html");
+
+  setTimeout(() => {
+    mainWindow.loadURL('http://www.transformice.com/TransformiceChargeur.swf');
+  }, 1600)
 });

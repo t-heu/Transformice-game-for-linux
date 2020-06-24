@@ -2,13 +2,13 @@
   "name": "transformice",
   "version": "1.0.0",
   "productName": "Transformice",
-  "description": "Transformice is a multiplayer game, where you play as a little mouse out to get cheese! With just over million of players, this deserve rewards. Sadly, me and a few people who play the game have problems setting up the Linux standalone. So, i decided to make my own with Node.js Electron. It's simple, easy, and open source!!",
+  "description": "Transformice is a multiplayer game, where you play as a little mouse out to get cheese!",
   "main": "main.js",
   "author": {
     "name": "t-heu"
   },
   "license": "MIT",
-  "homepage": "http://atelier801.com/",
+  "homepage": "https://github.com/t-heu/Transformice-game-for-linux/",
   "dependencies": {
     "electron-packager": "^14.2.1",
     "pretty-bytes": "^2.0.1"
@@ -23,31 +23,31 @@
     "icon": "app/icon.png"
   },
   "bugs": {
-    "url": "https://github.com/t-heu/Transformice_Linux/issues"
+    "url": "https://github.com/t-heu/Transformice-game-for-linux/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t-heu/Transformice-game-for-linux"
   },
   "keywords": [
     "Transformice",
     "TFM",
-    "MMO"
+    "MMO",
+    "mouse",
+    "cheese",
+    "game",
+    "flash"
   ],
   "scripts": {
     "start": "electron main.js",
     "clean": "rimraf dist",
+    "build:debian": "yarn clean && yarn exe32 && yarn deb32 && yarn exe64 && yarn deb64",
+    "build:rpm": "yarn clean && yarn exe32 && rpm32 && yarn exe64 && rpm64",
     "exe32": "electron-packager . app --platform linux --arch ia32 --out /dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite",
     "exe64": "electron-packager . app --platform linux --arch x64 --out /dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite",
-    "deb32": "electron-installer-debian --src /dist/app-linux-ia32/ --dest ~/Desktop  --arch i386 --config config.json",
-    "deb64": "electron-installer-debian --src /dist/app-linux-x64/ --dest ~/Desktop --arch amd64 --config config.json",
-    "build64": "npm run clean && npm run exe64 && npm run deb64",
-    "build32": "npm run clean && npm run exe32 && npm run deb32",
-    "linux": "sudo npm run build32 && sudo npm run build64",
-    "winexe32": "electron-packager . app --platform win32 --arch ia32 --out /dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite",
-    "winexe64": "electron-packager . app --platform win32 --arch x64 --out /dist/ --ignore \"(dist|node_modules/electron.*)\" --overwrite",
-    "set32": "sudo electron-installer-windows --src /dist/app-win32-ia32/ --dest ~/Desktop/win/ia32/ --config conf.json",
-    "set64": "sudo electron-installer-windows --src /dist/app-win32-x64/ --dest ~/Desktop/win/x64/ --config conf.json",
-    "build": "npm run clean && npm run winexe32 && npm run set32 && npm run winexe64 && npm run set64"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/t-heu/Transformice_Linux"
+    "deb32": "electron-installer-debian --src /dist/app-linux-ia32/ --dest dist/installers/deb/  --arch i386 --config config.json",
+    "deb64": "electron-installer-debian --src /dist/app-linux-x64/ --dest dist/installers/deb/ --arch amd64 --config config.json",
+    "rpm32": "electron-installer-redhat--src dist/app-linux-ia32/ --dest dist/installers/rpm/ --arch i386",
+    "rpm64": "electron-installer-redhat--src dist/app-linux-x64/ --dest dist/installers/rpm/ --arch x86_64"
   }
 }

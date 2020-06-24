@@ -12,8 +12,17 @@ Transformice is a multiplayer game, where you play with a mouse to get cheese! W
 
 ### Installing (recommended)
 
-```check on your system which architecture. 
-#x86_64
+```check on your system which architecture.
+debian(.deb)
+
+# x86_64
+...
+
+# x32
+...
+
+redhat(.rpm)
+# x86_64
 ...
 
 # x32
