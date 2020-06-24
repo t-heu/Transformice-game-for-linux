@@ -62,6 +62,6 @@ If you use another version of linux, **this doesn't mean it doesn't work on your
 
 if you experience problems open try reopening the program or try to access the game in the browser, if nothing goes right and the problem is another, open an isssue.
 
-## History/Histórico
+## History
 
-Da uma olhada na aba [Releases](https://github.com/t-heu/Transformice-game-for-linux/releases) pra acompanhar as alterações feitas no projeto.
+Take a look at the tab [Releases] (https://github.com/t-heu/Transformice-game-for-linux/releases) to track changes made to the project.
