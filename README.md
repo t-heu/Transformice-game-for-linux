@@ -1,13 +1,13 @@
 ## Transformice for Linux
 
 <p align="center">
-  <img alt="Logo" src="./icons;icone48.png" width="150" />
+  <img alt="logo" src="./icons/icone128.png" width="150" />
 </p>
 
 Transformice is a multiplayer game, where you play with a mouse to get cheese! With just over a million players, it deserves rewards. Unfortunately, me and some people who play the game and have trouble configuring standalone Linux or playing through the browser spend ram is internet processing for a while, leaving the game a bit laggy. So, I decided to make my own with Node.js Electron. It's open source!
 
 <p align="center">
-  <img alt="capture" src="./_docs/Captura de tela_2020-06-23_16-37-36.png" width="150" />
+  <img alt="capture" src="./_docs/Captura de tela_2020-06-23_16-37-36.png" width="650" />
 </p>
 
 ### Installing (recommended)
