@@ -1,0 +1,12 @@
+{
+  "dest": "/dist/installers/",
+  "name": "Transformice",
+  "icon": "icons/icone128.png",
+  "bin": "app",
+  "categories": [
+    "Utility"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ]
+}
