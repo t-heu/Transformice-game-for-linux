@@ -58,7 +58,7 @@ If you use another version of linux, **this doesn't mean it doesn't work on your
 *  `CTRL + q` - Close the application 
 *  `CTRL + m` - Min/Max Application
 
-### Erros/Bugs
+### Errors/Bugs
 
 if you experience problems open try reopening the program or try to access the game in the browser, if nothing goes right and the problem is another, open an isssue.
 
